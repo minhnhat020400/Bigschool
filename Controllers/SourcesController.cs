@@ -1,4 +1,5 @@
-﻿using System;
+﻿using Bigschool.ViewModel;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Web;
@@ -17,7 +18,8 @@ namespace Bigschool.Controllers
 
         public ActionResult Create()
         {
-            var viewmodel = new 
+            var viewmodel = new SourceViewModel { };
+
             return View();
         }
     }
