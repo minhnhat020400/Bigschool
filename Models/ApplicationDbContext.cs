@@ -1,4 +1,7 @@
-﻿using System;
+﻿using Bigschool.Models;
+using Microsoft.AspNet.Identity.EntityFramework;
+using System;
+using System.Data.Entity;
 
 public class ApplicationDbContext : IdentityDbContext<ApplicationUser>
 {

@@ -8,11 +8,16 @@ namespace Bigschool.Controllers
 {
     public class SourcesController : Controller
     {
-
+        public readonly ApplicationDbContext _dbContext;
         // GET: Sources
-        public readonly 
+        public SourcesController() {
+
+            _dbContext = new ApplicationDbContext();
+        }
+
         public ActionResult Create()
         {
+            var viewmodel = new 
             return View();
         }
     }
