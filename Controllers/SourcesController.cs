@@ -1,5 +1,6 @@
 ﻿using Bigschool.Models;
 using Bigschool.ViewModel;
+using Microsoft.AspNet.Identity;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -16,12 +17,31 @@ namespace Bigschool.Controllers
 
             _dbContext = new ApplicationDbContext();
         }
-
+        [Authorize]
+        
         public ActionResult Create()
         {
-            var viewmodel = new SourceViewModel { };
+            var viewmodel = new SourceViewModel {
+                categories = _dbContext.categories.ToList()
+            };
 
             return View(viewmodel);
+        }
+        [Authorize]
+        [HttpPost]
+        public ActionResult Create(SourceViewModel viewModel)
+
+        {
+            var course = new Soure
+            {
+                LiecturerId = User.Identity.GetUserId(),
+                DateTime = viewModel.GetDateTime(),
+                catacoryId=viewModel.Category,
+                Place= viewModel.Place
+            };
+            _dbContext.soures.Add(course);
+            _dbContext.SaveChanges();
+            return RedirectToAction("Index", "Home");
         }
     }
 }

@@ -13,13 +13,14 @@
 </form>-->
 <h2>Create</h2>
 
-<form>
+@using (Html.BeginForm("create", "Sources"))
+{
     <div class="form-group">
         @Html.LabelFor(m => m.Place)
         @Html.TextBoxFor(m => m.Place, new { @class = "form-control" })
 
     </div>
-    
+
     <div class="form-group">
         @Html.LabelFor(m => m.Date)
         @Html.TextBoxFor(m => m.Date, new { @class = "form-control" })
@@ -30,9 +31,8 @@
     </div>
     <div class="form-group">
         @Html.LabelFor(m => m.Category)
-        @Html.DropDownListFor(m=> m.Category,
-            new SelectList(Model.categories, "Id", "Name"),"", new {@class = "form-control" })
-
+        @Html.DropDownListFor(m => m.Category,
+             new SelectList(Model.categories, "Id", "Name"), "", new { @class = "form-control" })
     </div>
-    <div class="form-group"></div>
-</form>
+    <button type="submit" value="Save" class="btn btn-default">save </button>
+}
