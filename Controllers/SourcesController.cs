@@ -21,7 +21,7 @@ namespace Bigschool.Controllers
         {
             var viewmodel = new SourceViewModel { };
 
-            return View();
+            return View(viewmodel);
         }
     }
 }
