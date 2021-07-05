@@ -32,6 +32,11 @@ namespace Bigschool.Controllers
         public ActionResult Create(SourceViewModel viewModel)
 
         {
+            if (!ModelState.IsValid)
+            {
+                viewModel.categories = _dbContext.categories.ToList();
+                return View("Create", viewModel);
+            }
             var course = new Soure
             {
                 LiecturerId = User.Identity.GetUserId(),
