@@ -1,4 +1,5 @@
-﻿using Bigschool.ViewModel;
+﻿using Bigschool.Models;
+using Bigschool.ViewModel;
 using System;
 using System.Collections.Generic;
 using System.Linq;
