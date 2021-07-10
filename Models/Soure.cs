@@ -1,4 +1,6 @@
-﻿using System;
+﻿using Bigschool.ViewModel;
+
+using System;
 using System.Collections.Generic;
 using System.ComponentModel.DataAnnotations;
 using System.Linq;
@@ -15,7 +17,9 @@ namespace Bigschool.Models
         public string LiecturerId { get; set; }
         [Required]
         [StringLength(255)]
+
         public string Place { get; set; }
+        
         public DateTime DateTime { get; set; }
         public Category catagory { get; set; }
         [Required]
