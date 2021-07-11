@@ -29,6 +29,7 @@ namespace Bigschool.Controllers
         }
         [Authorize]
         [HttpPost]
+        [ValidateAntiForgeryToken]
         public ActionResult Create(SourceViewModel viewModel)
 
         {

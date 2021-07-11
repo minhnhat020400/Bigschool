@@ -15,13 +15,16 @@
 
 @using (Html.BeginForm("create", "Sources"))
 {
+    @Html.AntiForgeryToken()
+    <ul>
+
+    </ul>
     <div class="form-group">
         @Html.LabelFor(m => m.Place)
         @Html.TextBoxFor(m => m.Place, new { @class = "form-control" })
         @Html.ValidationMessageFor(m=> m.Place)
 
     </div>
-
     <div class="form-group">
         @Html.LabelFor(m => m.Date)
         @Html.TextBoxFor(m => m.Date, new { @class = "form-control" })
@@ -38,6 +41,9 @@
              new SelectList(Model.categories, "Id", "Name"), "", new { @class = "form-control" })
         @Html.ValidationMessageFor(m => m.Category)
     </div>
-    <button type="submit" value="Save" class="btn btn-default">save </button>
-    
+    <button type="submit" value="Save" class="btn btn-default">save </button>  
+}
+@section scripts
+{
+    @Scripts.Render("~/bundles/jqueryval")
 }

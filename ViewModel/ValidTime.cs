@@ -7,18 +7,16 @@ using System.Web;
 
 namespace Bigschool.ViewModel
 {
-    public class FutureDate : ValidationAttribute
+    public class ValidTime: ValidationAttribute
     {
         public override bool IsValid(object value)
         {
-            DateTime date;
-            var isValid = DateTime.TryParseExact(Convert.ToString(value),
-                "dd/M/yyyy",
+            DateTime datetime;
+            var isvalid = DateTime.TryParseExact(Convert.ToString(value),"HH:mm",
                 CultureInfo.CurrentCulture,
                 DateTimeStyles.None,
-                out date
-            ); ;
-            return (isValid && date > DateTime.Now);
+                out datetime);
+            return isvalid;
         }
     }
 }

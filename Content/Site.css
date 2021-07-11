@@ -22,3 +22,19 @@ select,
 textarea {
     max-width: 280px;
 }
+/*override the defaut bootstrap by nhất*/
+    body .navbar-inverse {
+        background-color: red;
+        border-color: black;
+    }
+.navbar-inverse .navbar-nav > li > a {
+    color: white;
+}
+.navbar-inverse .navbar-brand {
+    color: white;
+}
+.navbar-right {
+    float: right !important;
+    margin-right: -15px;
+    background-color: black;
+}
