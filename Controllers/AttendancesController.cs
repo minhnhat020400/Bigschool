@@ -9,6 +9,7 @@ using System.Web.Http;
 
 namespace Bigschool.Controllers
 {
+    [Authorize]
     public class AttendancesController : ApiController
     {
         private ApplicationDbContext _Dbcontext;
