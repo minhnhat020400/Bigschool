@@ -193,6 +193,10 @@
     <Compile Include="Migrations\202107120738138_khoitao.Designer.cs">
       <DependentUpon>202107120738138_khoitao.cs</DependentUpon>
     </Compile>
+    <Compile Include="Migrations\202107120930139_AddAttendance.cs" />
+    <Compile Include="Migrations\202107120930139_AddAttendance.Designer.cs">
+      <DependentUpon>202107120930139_AddAttendance.cs</DependentUpon>
+    </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Models\AccountViewModels.cs" />
     <Compile Include="Models\ApplicationDbContext.cs" />
@@ -288,6 +292,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Migrations\202107120738138_khoitao.resx">
       <DependentUpon>202107120738138_khoitao.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\202107120930139_AddAttendance.resx">
+      <DependentUpon>202107120930139_AddAttendance.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <PropertyGroup>

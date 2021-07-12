@@ -3,16 +3,6 @@
     ViewBag.Title = "Home Page";
 }
 
-<div class="row">
-    <ul>
-        @foreach (var course in Model)
-        {
-            <li>
-                @course.DateTime - @course.Lecturer.Name
-            </li>
-        }
-    </ul>
-</div>
 
 <ul class="course">
     @foreach ( var course in Model)
@@ -28,7 +18,7 @@
             </div>
             <div class="details">
                 <span class="lecturer"> @course.Lecturer.Name</span>
-                <span class="lecturer"> @course.catagory.Name</span>
+                <span class="lecturer"> @course.Category.Name</span>
             </div>
         </li>
     }
