@@ -8,7 +8,7 @@ using System.Web.Mvc;
 
 namespace Bigschool.ViewModel
 {
-    public class SourceViewModel
+    public class CourseViewModel
     {
         [Required]
         public string Place { get; set; }

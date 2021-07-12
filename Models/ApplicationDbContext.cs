@@ -9,7 +9,7 @@ namespace Bigschool.Models
 {
     public class ApplicationDbContext : IdentityDbContext<ApplicationUser>
     {
-        public DbSet<Soure> soures { get; set; }
+        public DbSet<Course> Courses { get; set; }
         public DbSet<Category> categories { get; set; }
         public DbSet<Attendance> attendances { get; set; }
 
@@ -27,7 +27,7 @@ namespace Bigschool.Models
         protected override void OnModelCreating(DbModelBuilder modelBuilder)
         {
             modelBuilder.Entity<Attendance>()
-            .HasRequired(m => m.sourse)
+            .HasRequired(m => m.Course)
             .WithMany()
             .WillCascadeOnDelete(false);
             base.OnModelCreating(modelBuilder);

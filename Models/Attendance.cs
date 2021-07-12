@@ -9,7 +9,7 @@ namespace Bigschool.Models
 {
     public class Attendance
     {
-        public Soure sourse { get; set; }
+        public Course Course { get; set; }
 
         [Key]
 

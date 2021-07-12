@@ -181,29 +181,17 @@
     <Compile Include="Controllers\AttendancesController.cs" />
     <Compile Include="Controllers\HomeController.cs" />
     <Compile Include="Controllers\ManageController.cs" />
-    <Compile Include="Controllers\SourcesController.cs" />
+    <Compile Include="Controllers\CoursesController.cs" />
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
-    <Compile Include="Migrations\202106280714330_Initial.cs" />
-    <Compile Include="Migrations\202106280714330_Initial.Designer.cs">
-      <DependentUpon>202106280714330_Initial.cs</DependentUpon>
+    <Compile Include="Migrations\202107120737097_vvv.cs" />
+    <Compile Include="Migrations\202107120737097_vvv.Designer.cs">
+      <DependentUpon>202107120737097_vvv.cs</DependentUpon>
     </Compile>
-    <Compile Include="Migrations\202106280740223_Create-Category-Soure.cs" />
-    <Compile Include="Migrations\202106280740223_Create-Category-Soure.Designer.cs">
-      <DependentUpon>202106280740223_Create-Category-Soure.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Migrations\202106280755535_PopulateTable.cs" />
-    <Compile Include="Migrations\202106280755535_PopulateTable.Designer.cs">
-      <DependentUpon>202106280755535_PopulateTable.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Migrations\202107111334079_AddNameColumnToApplicationUser.cs" />
-    <Compile Include="Migrations\202107111334079_AddNameColumnToApplicationUser.Designer.cs">
-      <DependentUpon>202107111334079_AddNameColumnToApplicationUser.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Migrations\202107112000360_Adttendance.cs" />
-    <Compile Include="Migrations\202107112000360_Adttendance.Designer.cs">
-      <DependentUpon>202107112000360_Adttendance.cs</DependentUpon>
+    <Compile Include="Migrations\202107120738138_khoitao.cs" />
+    <Compile Include="Migrations\202107120738138_khoitao.Designer.cs">
+      <DependentUpon>202107120738138_khoitao.cs</DependentUpon>
     </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Models\AccountViewModels.cs" />
@@ -212,11 +200,11 @@
     <Compile Include="Models\Category.cs" />
     <Compile Include="Models\ApplicationUser.cs" />
     <Compile Include="Models\ManageViewModels.cs" />
-    <Compile Include="Models\Soure.cs" />
+    <Compile Include="Models\Course.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Startup.cs" />
     <Compile Include="ViewModel\FutureDate.cs" />
-    <Compile Include="ViewModel\SourceViewModel.cs" />
+    <Compile Include="ViewModel\CourseViewModel.cs" />
     <Compile Include="ViewModel\ValidTime.cs" />
   </ItemGroup>
   <ItemGroup>
@@ -276,7 +264,7 @@
     <Content Include="Views\Manage\VerifyPhoneNumber.cshtml" />
     <Content Include="Views\Shared\Lockout.cshtml" />
     <Content Include="Views\Shared\_LoginPartial.cshtml" />
-    <Content Include="Views\Sources\Create.cshtml" />
+    <Content Include="Views\Courses\Create.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
@@ -295,20 +283,11 @@
     <Content Include="Scripts\jquery-3.4.1.min.map" />
   </ItemGroup>
   <ItemGroup>
-    <EmbeddedResource Include="Migrations\202106280714330_Initial.resx">
-      <DependentUpon>202106280714330_Initial.cs</DependentUpon>
+    <EmbeddedResource Include="Migrations\202107120737097_vvv.resx">
+      <DependentUpon>202107120737097_vvv.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Migrations\202106280740223_Create-Category-Soure.resx">
-      <DependentUpon>202106280740223_Create-Category-Soure.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Migrations\202106280755535_PopulateTable.resx">
-      <DependentUpon>202106280755535_PopulateTable.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Migrations\202107111334079_AddNameColumnToApplicationUser.resx">
-      <DependentUpon>202107111334079_AddNameColumnToApplicationUser.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Migrations\202107112000360_Adttendance.resx">
-      <DependentUpon>202107112000360_Adttendance.cs</DependentUpon>
+    <EmbeddedResource Include="Migrations\202107120738138_khoitao.resx">
+      <DependentUpon>202107120738138_khoitao.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <PropertyGroup>

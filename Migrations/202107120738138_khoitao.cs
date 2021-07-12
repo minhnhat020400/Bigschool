@@ -3,7 +3,7 @@ namespace Bigschool.Migrations
     using System;
     using System.Data.Entity.Migrations;
     
-    public partial class PopulateTable : DbMigration
+    public partial class khoitao : DbMigration
     {
         public override void Up()
         {
@@ -11,7 +11,7 @@ namespace Bigschool.Migrations
             Sql("INSERT INTO CATEGORIES(ID, NAME) VALUES (2,'Bisness')");
             Sql("INSERT INTO CATEGORIES(ID, NAME) VALUES (3,'Marketing')");
         }
-        
+
         public override void Down()
         {
         }

@@ -9,11 +9,11 @@ using System.Web.Mvc;
 
 namespace Bigschool.Controllers
 {
-    public class SourcesController : Controller
+    public class CoursesController : Controller
     {
         public readonly ApplicationDbContext _dbContext;
         // GET: Sources
-        public SourcesController() {
+        public CoursesController() {
 
             _dbContext = new ApplicationDbContext();
         }
@@ -21,7 +21,7 @@ namespace Bigschool.Controllers
         
         public ActionResult Create()
         {
-            var viewmodel = new SourceViewModel {
+            var viewmodel = new CourseViewModel {
                 categories = _dbContext.categories.ToList()
             };
 
@@ -30,7 +30,7 @@ namespace Bigschool.Controllers
         [Authorize]
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public ActionResult Create(SourceViewModel viewModel)
+        public ActionResult Create(CourseViewModel viewModel)
 
         {
             if (!ModelState.IsValid)
@@ -38,14 +38,14 @@ namespace Bigschool.Controllers
                 viewModel.categories = _dbContext.categories.ToList();
                 return View("Create", viewModel);
             }
-            var course = new Soure
+            var course = new Course
             {
-                LiecturerId = User.Identity.GetUserId(),
+                LecturerId = User.Identity.GetUserId(),
                 DateTime = viewModel.GetDateTime(),
-                catacoryId=viewModel.Category,
+                CategoryId=viewModel.Category,
                 Place= viewModel.Place
             };
-            _dbContext.soures.Add(course);
+            _dbContext.Courses.Add(course);
             _dbContext.SaveChanges();
             return RedirectToAction("Index", "Home");
         }

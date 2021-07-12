@@ -7,13 +7,13 @@ namespace Bigschool.Migrations
     using System.Resources;
     
     [GeneratedCode("EntityFramework.Migrations", "6.2.0-61023")]
-    public sealed partial class CreateCategorySoure : IMigrationMetadata
+    public sealed partial class vvv : IMigrationMetadata
     {
-        private readonly ResourceManager Resources = new ResourceManager(typeof(CreateCategorySoure));
+        private readonly ResourceManager Resources = new ResourceManager(typeof(vvv));
         
         string IMigrationMetadata.Id
         {
-            get { return "202106280740223_Create-Category-Soure"; }
+            get { return "202107120737097_vvv"; }
         }
         
         string IMigrationMetadata.Source
